@@ -57,8 +57,7 @@ function App() {
       <header className="site-header">
         <div className="wrap header-inner">
           <a href="#top" className="brand focus-ring" aria-label="Environatural Corporation home" onClick={closeMenu}>
-            <span className="brand-mark" aria-hidden="true"><Leaf size={21} strokeWidth={1.8} /></span>
-            <span className="brand-type"><strong>EnC</strong><small>ENVIRONATURAL CORPORATION</small></span>
+            <img className="brand-logo" src="/environatural-logo.png" alt="" width={551} height={261} />
           </a>
           <nav className={`main-nav ${menuOpen ? 'is-open' : ''}`} aria-label="Main navigation">
             <a href="#what-we-do" className="nav-link" onClick={closeMenu}>What we do</a>
@@ -211,7 +210,7 @@ function App() {
 
       <footer className="site-footer">
         <div className="wrap footer-main">
-          <a href="#top" className="brand brand-footer focus-ring"><span className="brand-mark"><Leaf size={20} strokeWidth={1.8} /></span><span className="brand-type"><strong>EnC</strong><small>ENVIRONATURAL CORPORATION</small></span></a>
+          <a href="#top" className="brand brand-footer focus-ring" aria-label="Environatural Corporation home"><img className="brand-logo" src="/environatural-logo.png" alt="" width={551} height={261} /></a>
           <p>Connecting materials<br />with makers in the Philippines.</p>
           <a href="#request" className="footer-cta focus-ring">Request an appointment <ArrowUpRight size={15} /></a>
         </div>
