@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Environatural Corporation"
+description = "A corporate website for Environatural Corporation, a distributor serving manufacturers and tollers across personal care, home care, and pharmaceutical categories, with appointment requests as the primary visitor action."
+version = "1.0.0"
+id = "artifacts/environatural-site"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25722
+
+[services.development]
+run = "pnpm --filter @workspace/environatural-site run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/environatural-site", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/environatural-site/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25722"
+BASE_PATH = "/"
