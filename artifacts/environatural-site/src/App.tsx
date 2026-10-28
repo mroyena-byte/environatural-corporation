@@ -3,6 +3,17 @@ import { ArrowDown, ArrowRight, ArrowUpRight, Check, ChevronDown, Leaf, Menu, X 
 
 const EMAIL = 'info@enc.com.ph';
 
+const suppliers = [
+  { name: 'Symrise', image: '/supplier-logos/symrise.png', slug: 'symrise' },
+  { name: 'IOI Oleo Chemical', image: '/supplier-logos/ioi-oleochemical.png', slug: 'ioi-oleochemical' },
+  { name: 'Global Amines', image: '/supplier-logos/global-amines.png', slug: 'global-amines' },
+  { name: 'KaleCare Chemicals', image: '/supplier-logos/kalecare-chemicals.png', slug: 'kalecare-chemicals' },
+  { name: 'Univar Solutions', image: '/supplier-logos/univar-solutions.png', slug: 'univar-solutions' },
+  { name: 'Lucas Meyer Cosmetics by Clariant', image: '/supplier-logos/lucas-meyer-cosmetics.png', slug: 'lucas-meyer-cosmetics' },
+  { name: 'PT Martina Berto Tbk. — Martha Tilaar Group', image: '/supplier-logos/martina-berto.png', slug: 'martina-berto' },
+  { name: 'Clariant', image: '/supplier-logos/clariant.png', slug: 'clariant' },
+] as const;
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [formError, setFormError] = useState('');
@@ -61,6 +72,7 @@ function App() {
           </a>
           <nav className={`main-nav ${menuOpen ? 'is-open' : ''}`} aria-label="Main navigation">
             <a href="#what-we-do" className="nav-link" onClick={closeMenu}>What we do</a>
+            <a href="#suppliers" className="nav-link" onClick={closeMenu}>Suppliers</a>
             <a href="#who-we-serve" className="nav-link" onClick={closeMenu}>Who we serve</a>
             <a href="#approach" className="nav-link" onClick={closeMenu}>Our approach</a>
             <a href="#contact" className="nav-link" onClick={closeMenu}>Contact</a>
@@ -133,6 +145,31 @@ function App() {
               </article>
             </div>
             <p className="scope-disclaimer">Specific availability and suitability depend on your requirements. Tell us what you are working on and our team can discuss it with you.</p>
+          </div>
+        </section>
+
+        <section className="supplier-section" id="suppliers" aria-labelledby="suppliers-title">
+          <div className="wrap">
+            <div className="section-heading supplier-heading">
+              <div>
+                <p className="eyebrow">Our network</p>
+                <h2 className="display" id="suppliers-title">Suppliers behind<br /><span className="serif">the ingredients.</span></h2>
+              </div>
+              <p>EnC works with established suppliers across specialty ingredients. Availability and suitability depend on each application—talk to our team about your needs.</p>
+            </div>
+            <ul className="supplier-grid" aria-label="EnC supplier logos">
+              {suppliers.map((supplier) => (
+                <li className="supplier-card" key={supplier.slug} data-testid={`card-supplier-${supplier.slug}`}>
+                  <img
+                    className="supplier-logo"
+                    src={supplier.image}
+                    alt={supplier.name}
+                    decoding="async"
+                    data-testid={`img-supplier-${supplier.slug}`}
+                  />
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 

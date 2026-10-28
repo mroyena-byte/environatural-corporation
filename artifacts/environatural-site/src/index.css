@@ -201,6 +201,12 @@
 .cross-mark::before,.cross-mark::after { content:''; position:absolute; background: currentColor; border-radius: 1px; }
 .cross-mark::before { width: 2px; height: 22px; left: 10px; }
 .cross-mark::after { height: 2px; width: 22px; top: 10px; }
+.supplier-section { background: #e9eee5; padding: 98px 0 104px; }
+.supplier-heading { margin-bottom: 43px; }
+.supplier-heading h2 .serif { color: #037b3e; }
+.supplier-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 13px; list-style: none; margin: 0; padding: 0; }
+.supplier-card { min-width: 0; min-height: 142px; display: flex; align-items: center; justify-content: center; padding: 22px 27px; background: #fff; border: 1px solid #d9e1d6; }
+.supplier-logo { display: block; width: 100%; height: 62px; object-fit: contain; }
 .nature-section { background: #075c42; color: #f5f2e8; position: relative; overflow: hidden; padding: 111px 0 109px; }
 .nature-texture { position: absolute; width: 670px; height: 670px; border: 1px solid rgba(221,237,215,.16); border-radius: 50%; right: -55px; top: -145px; }
 .nature-texture::before,.nature-texture::after { content:''; position:absolute; inset: 39px; border: 1px solid rgba(221,237,215,.12); border-radius: 50%; }
@@ -296,6 +302,7 @@ textarea.field { resize: vertical; min-height: 88px; }
   .hero-art { height: 490px; }
   .hero-footnote { margin-top: 44px; }
   .scope-row { grid-template-columns: 30px 64px minmax(160px,1fr) minmax(185px,1fr) 35px; gap: 12px; }
+  .supplier-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .contact-grid { grid-template-columns: 1fr 1fr .55fr; gap: 26px; }
   .aside-illustration { width: 160px; height: 160px; transform: scale(.9); transform-origin: right center; }
 }
@@ -323,7 +330,7 @@ textarea.field { resize: vertical; min-height: 88px; }
   .art-stamp small { font-size: 6px; margin-top: 6px; }
   .art-caption { left: 32px; right: 20px; font-size: 7px; }
   .hero-index { display: none; }
-  .intro-band,.scope-section,.approach-section,.contact-section { padding: 78px 0; }
+  .intro-band,.scope-section,.supplier-section,.approach-section,.contact-section { padding: 78px 0; }
   .intro-grid { grid-template-columns: 1fr; gap: 25px; }
   .intro-label { gap: 13px; }
   .intro-heading { font-size: clamp(32px,8vw,47px); }
@@ -341,6 +348,9 @@ textarea.field { resize: vertical; min-height: 88px; }
   .scope-row > p { grid-column: 3/4; grid-row: 2; align-self: start; margin: -22px 0 16px; font-size: 10px; }
   .scope-arrow { grid-column: 4; grid-row: 1; width: 31px; height: 31px; }
   .scope-disclaimer { margin-left: 0; line-height: 1.6; }
+  .supplier-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .supplier-card { min-height: 122px; padding: 16px; }
+  .supplier-logo { height: 56px; }
   .nature-section { padding: 79px 0; }
   .nature-grid { grid-template-columns: 45px 1fr; gap: 18px; }
   .nature-mark { gap: 14px; }
