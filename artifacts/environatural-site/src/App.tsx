@@ -2,6 +2,7 @@ import { useState, type FormEvent } from 'react';
 import { ArrowDown, ArrowRight, ArrowUpRight, Check, ChevronDown, Leaf, Menu, X } from 'lucide-react';
 
 const EMAIL = 'info@enc.com.ph';
+const MAINTENANCE_MODE = true;
 
 const suppliers = [
   { name: 'Symrise', image: '/supplier-logos/symrise.png', slug: 'symrise' },
@@ -61,7 +62,97 @@ function App() {
     setSubmitted(true);
     window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
+  
+  if (MAINTENANCE_MODE) {
+    return (
+      <main
+        style={{
+          minHeight: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '32px 24px',
+          background: '#f7f6f1',
+          color: '#253d32',
+          fontFamily: 'Arial, sans-serif',
+          textAlign: 'center',
+        }}
+      >
+        <div style={{ maxWidth: '620px' }}>
+          <img
+            src="/environatural-logo.png"
+            alt="Environatural Corporation"
+            style={{
+              width: '180px',
+              maxWidth: '65%',
+              height: 'auto',
+              margin: '0 auto 48px',
+            }}
+          />
 
+          <p style={{
+            fontSize: '12px',
+            letterSpacing: '3px',
+            textTransform: 'uppercase',
+            color: '#6c806e',
+            marginBottom: '20px',
+          }}>
+            A little work behind the scenes
+          </p>
+
+          <h1 style={{
+            fontFamily: 'Georgia, serif',
+            fontSize: 'clamp(36px, 7vw, 58px)',
+            fontWeight: 400,
+            lineHeight: 1.15,
+            margin: '0 0 24px',
+          }}>
+            We're making
+            <br />
+            things better.
+          </h1>
+
+          <p style={{
+            fontSize: '16px',
+            lineHeight: 1.8,
+            color: '#59665c',
+            margin: '0 auto 32px',
+          }}>
+            Our website is currently undergoing updates as we
+            refine our content and improve your experience.
+            We're still here to support your home care and
+            cosmetics raw material needs.
+          </p>
+
+          <a
+            href={`mailto:${EMAIL}`}
+            style={{
+              display: 'inline-block',
+              padding: '14px 24px',
+              background: '#294b3a',
+              color: '#ffffff',
+              textDecoration: 'none',
+              borderRadius: '3px',
+              fontSize: '14px',
+            }}
+          >
+            Contact our EnC team
+          </a>
+
+          <p style={{
+            fontSize: '13px',
+            color: '#69756b',
+            marginTop: '36px',
+            lineHeight: 1.7,
+          }}>
+            Environatural Corporation
+            <br />
+            Filipino-owned. Rooted in thoughtful distribution.
+          </p>
+        </div>
+      </main>
+    );
+  }
   return (
     <div className="site-shell min-h-[100dvh]">
       <a className="skip-link focus-ring" href="#main">Skip to content</a>
