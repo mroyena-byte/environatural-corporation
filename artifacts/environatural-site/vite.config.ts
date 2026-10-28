@@ -5,27 +5,21 @@ import { defineConfig } from 'vite';
 
 import runtimeErrorOverlay from '@replit/vite-plugin-runtime-error-modal';
 
+// PORT is only used by the dev server (vite dev) and preview server
+// (vite preview). It is NOT needed during `vite build`. Default to 5173
+// so the config loads successfully in build environments (e.g. Cloudflare
+// Pages) where PORT is not set.
 const rawPort = process.env.PORT;
-
-if (!rawPort) {
-  throw new Error(
-    'PORT environment variable is required but was not provided.',
-  );
-}
-
-const port = Number(rawPort);
+const port = rawPort ? Number(rawPort) : 5173;
 
 if (Number.isNaN(port) || port <= 0) {
   throw new Error(`Invalid PORT value: "${rawPort}"`);
 }
 
-const basePath = process.env.BASE_PATH;
-
-if (!basePath) {
-  throw new Error(
-    'BASE_PATH environment variable is required but was not provided.',
-  );
-}
+// BASE_PATH sets the Vite `base` option, which affects asset URL prefixes
+// in the build output. Default to "/" — the correct value for Cloudflare
+// Pages, where the site is served from the root of the domain.
+const basePath = process.env.BASE_PATH || '/';
 
 export default defineConfig({
   base: basePath,
