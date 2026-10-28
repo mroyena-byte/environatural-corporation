@@ -105,6 +105,20 @@ function App() {
               <div className="art-orbit orbit-two" aria-hidden="true" />
             </div>
           </div>
+          <div className="hero-highlights wrap" aria-label="EnC at a glance">
+            <article className="highlight-item">
+              <span className="highlight-index">01</span>
+              <div><strong>Filipino-owned</strong><p>A local distribution partner for manufacturers and tollers.</p></div>
+            </article>
+            <article className="highlight-item">
+              <span className="highlight-index">02</span>
+              <div><strong>Three product needs</strong><p>Personal care, home care and pharmaceutical products.</p></div>
+            </article>
+            <article className="highlight-item">
+              <span className="highlight-index">03</span>
+              <div><strong>Nature-aware materials</strong><p>Natural and environment-friendly materials are part of our work.</p></div>
+            </article>
+          </div>
           <div className="hero-index" aria-hidden="true">01—04&nbsp; / &nbsp;DISTRIBUTION</div>
         </section>
 
@@ -183,6 +197,10 @@ function App() {
               <p>Natural and environment-friendly materials are part of EnC’s story. We believe the conversation should begin with your actual brief—not a promise that every material is right for every application.</p>
               <a href="#request" className="nature-link focus-ring">Bring us your question <ArrowRight size={16} /></a>
             </div>
+            <figure className="nature-image">
+              <img src="/ingredient-stilllife.png" alt="Still life of botanical leaves, natural materials and laboratory glassware" loading="lazy" width="1024" height="1024" />
+              <figcaption>Natural and environment-friendly materials</figcaption>
+            </figure>
             <div className="nature-side-note"><span>EN C / 02</span><span>Materials in context.<br />Conversations with care.</span></div>
           </div>
         </section>
