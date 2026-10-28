@@ -154,7 +154,7 @@
 .footnote-dot { width: 7px; height: 7px; background: #037b3e; border-radius: 50%; }
 .hero-art { height: 555px; position: relative; justify-self: end; width: 100%; max-width: 510px; margin-right: 10px; }
 .art-frame { position: absolute; inset: 15px 28px 25px 48px; overflow: hidden; background: #dddacb; }
-.art-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.art-frame img { width: 100%; height: 100%; object-fit: cover; object-position: 68% center; display: block; }
 .art-frame::after { content:''; position: absolute; inset:0; background: linear-gradient(180deg,rgba(10,45,30,.02),rgba(10,45,30,.13)); }
 .art-stamp { position: absolute; top: 59px; left: 6px; width: 113px; height: 113px; background: #037b3e; color: #f8f5e8; display: flex; flex-direction: column; justify-content: center; padding-left: 20px; transform: rotate(-4deg); }
 .art-stamp span { font: 700 29px/1 'Manrope',sans-serif; letter-spacing: -.09em; }
@@ -324,6 +324,7 @@ textarea.field { resize: vertical; min-height: 88px; }
   .hero-actions { margin-top: 25px; gap: 17px; }
   .hero-footnote { margin-top: 27px; font-size: 9px; }
   .hero-art { height: min(112vw,475px); width: 92%; margin: 20px 0 0 auto; }
+  .art-frame img { object-position: 82% center; }
   .art-frame { inset: 10px 20px 24px 32px; }
   .art-stamp { width: 86px; height: 86px; top: 42px; left: 0; padding-left: 14px; }
   .art-stamp span { font-size: 23px; }

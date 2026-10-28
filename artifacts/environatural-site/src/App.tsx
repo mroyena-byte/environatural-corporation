@@ -97,10 +97,10 @@ function App() {
               </div>
               <div className="hero-footnote"><span className="footnote-dot" /> Filipino-owned. Rooted in thoughtful distribution.</div>
             </div>
-            <div className="hero-art" aria-label="Botanical materials and glass vessels in soft daylight">
-              <div className="art-frame"><img src="/ingredient-stilllife.png" width="800" height="1024" alt="Glass vessels and botanical materials arranged in soft natural light" fetchPriority="high" /></div>
+            <div className="hero-art" aria-label="Environatural Corporation warehouse in Parañaque">
+              <div className="art-frame"><img src="/environatural-warehouse-hero.png" width="1024" height="1024" alt="Environatural Corporation warehouse entrance and EnC sign in Parañaque, Philippines" fetchPriority="high" /></div>
               <div className="art-stamp" aria-hidden="true"><span>EnC</span><small>MATTER<br />WITH CARE</small></div>
-              <div className="art-caption"><span>01 / INGREDIENTS</span><span>Nature, considered.</span></div>
+              <div className="art-caption"><span>01 / OUR WAREHOUSE</span><span>Parañaque, Philippines.</span></div>
               <div className="art-orbit orbit-one" aria-hidden="true" />
               <div className="art-orbit orbit-two" aria-hidden="true" />
             </div>
